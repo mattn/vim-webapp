@@ -50,7 +50,7 @@ You need to make following directory structure.
 
         function! myapp#handle(req)
           if a:req.path == '/foo'
-            return {"body", "hello world"}
+            return {"body": "hello world"}
           else
             let a:req.path = a:req.path[4:]
             return webapp#servefile(a:req, s:basedir)
